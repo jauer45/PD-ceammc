@@ -1,0 +1,89 @@
+#N canvas 523 197 383 489 10;
+#X obj 96 39 hsl 100 12 0 200 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 161 20 5 0 0 0 - - -, f 5;
+#X obj 23 33 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 39 259 osc~;
+#X obj 40 284 *~;
+#X obj 135 268 *~;
+#X obj 110 288 osc~ 2;
+#X obj 110 311 *~ 1;
+#X obj 25 359 osc~;
+#X obj 25 437 *~;
+#X obj 166 202 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 24 94 metro 220;
+#X obj 24 125 f;
+#X obj 59 125 + 1;
+#X obj 82 337 / 1000;
+#X obj 25 216 unpack 0 0;
+#X obj 82 360 / 2;
+#X obj 194 217 pack f f;
+#X obj 277 200 * 3;
+#X msg 194 239 1 2 \, 0 \$2 2;
+#X obj 166 306 pack f f;
+#X msg 166 332 1 2 \, 0 \$2 2;
+#X obj 82 381 + 0.5;
+#X obj 93 142 % 128;
+#X obj 166 358 vline~;
+#X obj 194 265 vline~;
+#X floatatom 81 430 5 0 0 0 - - -, f 5;
+#X obj 35 464 outlet~;
+#X obj 27 329 +~;
+#X obj 25 398 +~;
+#X floatatom 86 14 5 0 0 0 - - -, f 5;
+#X obj 302 159 outlet;
+#X obj 141 464 outlet;
+#X obj 44 14 ui.knob @size 38 38 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 11 @receive "(null)" @send "(null)"
+@pinned 1 @presetname "(null)" @background_color 0.93 0.93 0.93 1 @border_color
+0.6 0.6 0.6 1 @knob_color 0 0.75 1 1 @scale_color 0.6 0.6 0.6 1 @show_range
+1 @draw_active 1 @min 100 @max 300;
+#X obj 25 161 ui.knob @size 40 40 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 11 @receive "(null)" @send "(null)"
+@pinned 1 @presetname "(null)" @background_color 0.93 0.93 0.93 1 @border_color
+0.6 0.6 0.6 1 @knob_color 0 0.75 1 1 @scale_color 0.6 0.6 0.6 1 @show_range
+1 @draw_active 1 @min 0 @max 127;
+#X connect 0 0 18 0;
+#X connect 1 0 18 1;
+#X connect 2 0 11 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 28 1;
+#X connect 5 0 4 1;
+#X connect 6 0 7 0;
+#X connect 7 0 28 1;
+#X connect 8 0 29 0;
+#X connect 9 0 27 0;
+#X connect 10 0 17 0;
+#X connect 10 0 20 0;
+#X connect 10 0 32 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 12 1;
+#X connect 13 0 23 0;
+#X connect 14 0 16 0;
+#X connect 15 0 28 0;
+#X connect 15 1 14 0;
+#X connect 16 0 22 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 1;
+#X connect 18 0 20 1;
+#X connect 19 0 25 0;
+#X connect 20 0 21 0;
+#X connect 21 0 24 0;
+#X connect 22 0 26 0;
+#X connect 22 0 29 1;
+#X connect 23 0 31 0;
+#X connect 23 0 34 0;
+#X connect 24 0 9 1;
+#X connect 25 0 5 1;
+#X connect 28 0 8 0;
+#X connect 29 0 9 0;
+#X connect 33 0 11 1;
+#X connect 33 0 30 0;
+#X connect 34 0 10 0;
+#X connect 34 0 3 0;
+#X connect 34 0 15 0;
+#X coords 0 -1 1 1 200 45 1 5 10;

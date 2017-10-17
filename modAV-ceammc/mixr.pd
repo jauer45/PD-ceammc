@@ -1,0 +1,24 @@
+#N canvas 441 387 303 290 10;
+#X obj 10 224 outlet~;
+#X obj 11 4 inlet~;
+#X obj 62 4 inlet~;
+#X obj 106 46 hsl 50 14 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 11 160 *~;
+#X floatatom 54 95 5 0 0 0 - - -, f 5;
+#X msg 54 118 \$1 20;
+#X obj 54 144 line~;
+#X obj 56 176 env~ 128;
+#X obj 56 201 - 100;
+#X obj 180 33 vu 14 80 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X coords 0 -1 1 1 140 100 1 95 20;
